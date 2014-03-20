@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="saeweixin" extends="struts-default">
+
+    		<action name="saveSite" class="saveSiteAction">
+    			<result name="success" type="redirect">listSite.action</result>
+    		</action>
+    		
+    		<action name="listSite" class="listSiteAction">
+    			<result name="success">/list.jsp</result>
+    		</action>
+    		
+    		<action name="deleteSite" class="removeSiteAction">
+    			<result name="success" type="redirect">listSite.action</result>
+    		</action>
+    		
+    		<action name="updatePSite" class="updatePSiteAction">
+    			<result name="success">/update.jsp</result>
+    		</action>
+    		
+    		<action name="updateSite" class="updateSiteAction">
+    			<result name="success" type="redirect">listSite.action</result>
+    		</action>
+    		
+    		<action name="readArticle" class="readArticleAction">
+    			<result name="success">/article.jsp</result>
+    		</action>
+    		
+    		<action name="queryAction" class="queryAction">
+    		</action>
+			
+			<action name="listToUser" class="listToUserAction">
+				<result name="success">/listToUser.jsp</result>
+			</action>
+			
+			<!-- 欢迎页面 -->
+			<action name="" class="com.happytravelers.action.WelcomeAction">
+				<result>/index.jsp</result>
+			</action>
+    		
+    	</package>
+</struts>    

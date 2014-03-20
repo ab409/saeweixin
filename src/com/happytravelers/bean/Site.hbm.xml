@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.happytravelers.bean">
+	<class	name="Site"	table="happytravelers">
+		<id	name="id" type="integer" column="id">
+			<generator class="increment"/>
+		</id>
+		<property name="name" column="name" type="string" length="20"/>
+		<property name="title" length="100" type="string"></property>
+		<property name="picture" length="100" type="string"></property>
+		<property name="content" type="text">
+			<column name="content" sql-type="text"/>
+		</property>
+	</class>
+</hibernate-mapping>
